@@ -1,0 +1,21 @@
+.hostLayoutContainer{
+    display: flex;
+    width: 30vw;
+    padding-block: 1.5em;
+    padding-inline: 1em;
+}
+
+.hostLayoutContainer a {
+    text-decoration: none;
+    color: #4D4D4D;
+}
+
+.hostLayoutContainer a:not(:first-child){
+    margin-left: 2em;
+}
+
+.hostLayoutContainer a:hover {
+    color: #161616;
+    text-decoration: underline;
+    font-weight: bold;
+}

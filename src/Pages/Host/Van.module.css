@@ -1,0 +1,108 @@
+.vanContainer{
+    width: 100%;
+    height: fit-content;
+    background-color: #FFF;
+    padding: 1.3em;
+    margin-block: 1em;
+    box-sizing: border-box;
+    display: grid;
+    grid-auto-rows: 170px 50px 1fr;
+    align-items: start;
+}
+
+.headingContainer{
+    display: flex;
+    align-items: center;
+}
+
+.headingInfoContainer{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1em;
+}
+
+.headingInfoContainer button{
+    align-self: flex-start;
+    border: none;
+    padding: .5em 1em;
+    color: #FFF;
+    font-weight: 800;
+    border-radius: 3px;
+ }
+
+.headingInfoContainer p:first-of-type{
+    margin-block: .5em;
+    margin-inline: 0;
+    font-size: 1.2em;
+    font-weight: bold ;
+}
+
+.headingContainer p:last-of-type{
+    margin-top: 0;
+    font-weight: 700;
+    text-align: justify;
+}
+
+.headingContainer p:last-of-type span{
+    font-weight: normal;
+}
+
+.headingContainer img{
+    height: 150px;
+}
+
+.linksContainer{
+    display: flex;
+    align-items: center;
+    width: 30vw;
+}
+
+.linksContainer a {
+    text-decoration: none;
+    color: #4D4D4D;
+}
+
+.linksContainer a:not(:first-child){
+    margin-left: 2em;
+}
+
+.linksContainer a:hover {
+    color: #161616;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.aboutVanContainer{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.backToAllVans{
+    display: flex;
+    align-items: center;
+    margin-left: 1em;
+    color: #000;
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+.backToAllVans span{
+    margin-left: .3em;
+}
+
+.outletContainer{
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 560px){
+    .vanContainer{
+        width: 90vw;
+        margin-inline: auto;
+        margin-block: 1em;
+        min-width: 400px;
+    }
+}
+   

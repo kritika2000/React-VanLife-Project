@@ -1,0 +1,46 @@
+.vansContainer{
+    padding: 0 1em 1em;
+    box-sizing: border-box;
+}
+
+.vansListContainer{
+    display: grid;
+    row-gap: .7em;
+    grid-auto-rows: 80px;
+}
+
+.vanContainer{
+    display: flex;
+    align-items: center;
+    background-color: #FFF;
+    padding: .7em;
+}
+
+.editStyle{
+    margin-left: auto;
+    border: none;
+    color: #000;
+    background: none;
+}
+
+.vanContainer img{
+    height: 100%;
+}
+
+.vanContainer p{
+    margin: 0;
+}
+
+.vanInfoContainer{
+    display: flex;
+    flex-direction: column;
+    margin-left: .8em;
+}
+
+.vanInfoContainer p:first-child{
+    font-weight: bold;
+}
+
+.vanInfoContainer p:last-child{
+    font-size: .8em;
+}

@@ -1,0 +1,66 @@
+.vanContainer{
+    height: 100%;
+    width: 550px;
+    display: grid;
+    grid-auto-rows: 300px repeat(5, 1fr);
+    box-sizing: border-box;
+    padding: 3em;
+    margin: auto;
+}
+
+.vanContainer img{
+    width: 100%;
+    max-height: 300px;
+}
+.vanContainer p{
+    margin-top: 0;
+}
+
+.vanContainer p:not(:nth-of-type(3)){
+    font-weight: 900;
+}
+
+.vanContainer button{
+    border: none;
+    background-color: #FF8C38;
+    color: #FFF;
+    font-weight: 800;
+    border-radius: 3px;
+}
+
+.vanContainer button:first-of-type{
+    justify-self: start;
+    padding: .5em 1em;
+    margin-block: 1em;
+}
+
+.vanContainer button:last-of-type{
+    padding: 1em;
+}
+
+
+.backToAllVans{
+    display: flex;
+    align-items: center;
+    margin-left: 1em;
+    color: #000;
+    font-weight: bold;
+    align-self: flex-start;
+    margin-bottom: 1em;
+}
+
+.backToAllVans span{
+    margin-left: .3em;
+}
+
+@media (max-width: 550px){
+    .vanContainer img{
+        width: 100%;
+    }
+    .vanContainer button:last-of-type{
+        width: 100%;
+    }
+    .vanContainer{
+        width: 100vw;
+    }
+}

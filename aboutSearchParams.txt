@@ -1,0 +1,7 @@
+Query/Search params are used to represent a change in the UI.
+For eg: filtering, pagination, sorting etc.
+We can't share the current state as state resets on page reload.
+so for eg: if we want to share the results of 4 filters applied etc
+then the best approach would be to put the filters in the URL only.
+
+Query params are key/value pairs -> /vans?type=rugged

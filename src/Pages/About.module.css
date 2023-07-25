@@ -1,0 +1,28 @@
+.aboutContainer{
+    height: 100%;
+    width: 100%;
+}
+
+.aboutContainer img{
+    height: 250px;
+    width: 100%;
+}
+
+.infoContainer, .destinationContainer{
+    margin: 2em;
+}
+
+.destinationContainer{
+    background-color: rgba(255, 140, 56, .5);
+    padding: 1em;
+    font-weight: 900;
+    border-radius: 5px;
+}
+
+.destinationContainer button{
+    border: none;
+    background-color: #000;
+    color: #fff;
+    padding: 1em;
+    border-radius: 5px;
+}

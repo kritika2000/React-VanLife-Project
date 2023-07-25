@@ -1,0 +1,121 @@
+.incomeContainer{
+    padding-inline: 1em;
+    padding-block-end: 1em;
+}
+
+.incomeContainer > p:nth-of-type(2){
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: .5em;
+}
+
+.incomeContainer p:first-of-type{
+    font-size: .9em;
+}
+
+.incomeContainer p:first-of-type span{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.transactionsContainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 60%;
+    gap: 1em;
+}
+
+.graphContainer{
+    width: 60%;
+}
+
+.transactionsContainer .transaction{
+    display: flex;
+    align-items: center;
+    background-color: #FFF;
+    padding: 1.5em 1em;
+}
+
+.transaction p{
+    margin: 0;
+}
+
+.transaction p:first-child{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.transaction p:last-child{
+    margin-left: auto;
+    color: gray;
+    font-size: .9em;
+    font-weight: 600;
+}
+
+.graphContainer{
+    display: grid;
+    grid-auto-rows: 200px 60px;
+    place-content: center;
+}
+
+.barsContainer, .rowContainer{
+    display: flex;
+    gap: 1em;
+}
+
+.barContainer{
+    display: grid;
+    grid-auto-rows: 150px 50px;
+}
+
+.barContainer > div:first-child{
+    width: 30px;
+    align-self: end;
+}
+
+.barContainer > div:last-child{
+    margin: auto;
+}
+
+.barContainer:nth-child(1) div:first-child{
+    background-color: #FFEAD0;
+    border-radius: 3px;
+    height: 80%;
+}
+.barContainer:nth-child(2) div:first-child{
+    background-color: #FFEAD0;
+    border-radius: 3px;
+    height: 30%;
+}
+.barContainer:nth-child(3) div:first-child{
+    background-color: #FFEAD0;
+    border-radius: 3px;
+    height: 60%;
+}
+.barContainer:nth-child(4) div:first-child{
+    background-color: #FFEAD0;
+    border-radius: 3px;
+    height: 50%;
+}
+.barContainer:nth-child(5) div:first-child{
+    background-color: #FF8C38;
+    border-radius: 3px;
+    height: 35%;
+}
+.barContainer:nth-child(6) div:first-child{
+    background-color:  #FF8C38;
+    border-radius: 3px;
+    height: 15%;
+}
+
+@media (max-width: 450px){
+    .transactionsContainer, .graphContainer{
+        width: 100%;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1600px){
+    .transactionsContainer, .graphContainer{
+        width: 40%;
+    }
+}

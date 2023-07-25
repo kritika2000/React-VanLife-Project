@@ -1,0 +1,10 @@
+.pricingContainer p{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-block-start: 0;
+}
+
+.pricingContainer p span{
+    font-weight: normal;
+    font-size: 1em;
+}
