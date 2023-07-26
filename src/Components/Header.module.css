@@ -7,7 +7,7 @@
     padding-inline: 1em;
 }
 
-.navLinks{
+.navLinks:not(:last-child){
     margin-right: 2em;
 }
 

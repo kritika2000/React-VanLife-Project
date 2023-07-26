@@ -1,5 +1,6 @@
 import { createServer, Model } from "miragejs"
 
+// https://blog.logrocket.com/mirage-js-tutorial-mocking-apis-in-react/
 
 createServer({
     models: {

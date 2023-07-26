@@ -1,6 +1,5 @@
 import React, { useState, useEffect,  } from 'react'
 import styles from './Vans.module.css'
-// import axios from 'axios';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import getVans from '../../api/getVans';
 
@@ -87,6 +86,7 @@ function Vans() {
      <div className={styles.vansContainer}>
       <h2>Explore our van options</h2>
       <div className={styles.filtersContainer}>
+        {/* These are filters  */}
         <button className={styles.simple} style={typeFilter === 'simple' ? simpleStyle : null } onClick={() => applyFilter('simple')}>Simple</button>
         <button className={styles.rugged} style={typeFilter === 'rugged' ? ruggedStyle : null } onClick={() => applyFilter('rugged')}>Rugged</button>
         <button className={styles.luxury} style={typeFilter === 'luxury' ? luxuryStyle : null } onClick={() => applyFilter('luxury')}>Luxury</button>

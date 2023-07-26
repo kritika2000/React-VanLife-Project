@@ -17,7 +17,7 @@ function Van(van){
           <p>{van.name}</p>
           <p>${van.price}/day</p>
         </div>
-        <button className={styles.editStyle} onClick={navigateToVan}>Edit</button>
+        <button className={styles.editStyle} onClick={navigateToVan}>Details</button>
       </div>
     )
   }

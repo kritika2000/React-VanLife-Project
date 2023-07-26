@@ -1,7 +1,13 @@
 import React from 'react'
 import styles from './About.module.css'
+import { useNavigate } from 'react-router-dom';
 
 function About() {
+  const navigate = useNavigate();
+
+  function navigateToVans(){
+    navigate("/vans");
+  }
   return (
     <div className={styles.aboutContainer}>
       <img src='../images/about-hero.png'/>
@@ -14,7 +20,7 @@ function About() {
       <div className={styles.destinationContainer}>
         <p>Your destination is waiting</p>
         <p>Your van is ready</p>
-        <button>Explore our vans</button>
+        <button onClick={navigateToVans}>Explore our vans</button>
       </div>
     </div>
   )

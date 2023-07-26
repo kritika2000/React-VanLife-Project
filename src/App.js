@@ -30,7 +30,6 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Layout/>}>
-          {/* <Route path='login' element={<Login/>}/> */}
           <Route index element={<Home/>}/>
           <Route path="about" element={<About/>}/>
           {/* Vans Paths */}
@@ -71,5 +70,13 @@ needs to be rendered for a specific route.
 /* Dashboard is an index route as path="/" won't work here because "/" is an absolute route */
 /* income, reviews are relative routes as we're not using slash before them.
 These routes are relevant to the parent routes, so it will take the user to "/host/income".
+
+How this app works?
+This app was created to learn react routing.
+
+We have various routes -> Home, About, Vans.
+Here we have a concept of parent routes, which are somewhere shared by child routes
+and in the parent route we render then as outlet components(denotes the current route matching component).
+
 */
        

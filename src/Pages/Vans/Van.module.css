@@ -1,11 +1,14 @@
 .vanContainer{
-    height: 100%;
+    /* height: 100%; */
     width: 550px;
     display: grid;
     grid-auto-rows: 300px repeat(5, 1fr);
     box-sizing: border-box;
-    padding: 3em;
-    margin: auto;
+    margin-block: 2em;
+    padding: 1.3em;
+    margin-inline: auto;
+    background-color: #FFF;
+    border-radius: 5px;
 }
 
 .vanContainer img{
@@ -61,6 +64,6 @@
         width: 100%;
     }
     .vanContainer{
-        width: 100vw;
+        width: 90vw;
     }
 }

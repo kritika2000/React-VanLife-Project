@@ -3,6 +3,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 2em;
+    gap: 16px;
 }
 
 .vanContainer{
@@ -11,6 +12,12 @@
     padding: 1em;
     flex-basis: 25%;
     flex-grow: 1;
+    background-color: #FFF;
+    border-radius: 5px;
+}
+
+.vanContainer:hover{
+    transform: scale(1.02);
 }
 
 .vanInfoContainer{
