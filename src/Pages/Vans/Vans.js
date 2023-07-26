@@ -1,7 +1,8 @@
 import React, { useState, useEffect,  } from 'react'
 import styles from './Vans.module.css'
-import axios from 'axios';
+// import axios from 'axios';
 import { useNavigate, useSearchParams } from 'react-router-dom';
+import getVans from '../../api/getVans';
 
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
@@ -31,7 +32,8 @@ function Van(props){
 
 function Vans() {
   const [vans, setVans] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isError, setError] = useState(false);
   const [searchParams, setSearchParams] = useSearchParams();
 
   const simpleStyle = {
@@ -50,10 +52,23 @@ function Vans() {
   }
 
   useEffect(() => {
-    axios.get('api/vans').then(response => {
-      setVans(response.data.vans);
-      setIsLoading(false);
-    });
+    // axios.get('api/vans').then(response => {
+    //   setVans(response.data.vans);
+    //   setIsLoading(false);
+    // });
+    async function loadVans(){
+      setIsLoading(true);
+      try{
+        const data = await getVans();
+        setVans(data);
+        setError(false);
+      } catch(err){
+        setError(true);
+      } finally {
+        setIsLoading(false)
+    }
+    }
+    loadVans();
   }, [])
 
   function applyFilter(type){
@@ -66,7 +81,7 @@ function Vans() {
 
   const typeFilter = searchParams.get('type');
   const allVanItems = !typeFilter ? vans.map((van) => <Van key={van.id} van={van} filters={searchParams.toString()}/>) 
-  : vans.filter((van) => van.type === typeFilter).map((van) => <Van key={van.id} van={van} filters={searchParams.toString()}/>);
+    : vans.filter((van) => van.type === typeFilter).map((van) => <Van key={van.id} van={van} filters={searchParams.toString()}/>);
   
   return (
      <div className={styles.vansContainer}>
@@ -77,7 +92,7 @@ function Vans() {
         <button className={styles.luxury} style={typeFilter === 'luxury' ? luxuryStyle : null } onClick={() => applyFilter('luxury')}>Luxury</button>
         <button style={{backgroundColor: '#FFF7ED', border: 'none', textDecoration: 'underline'}} onClick={clearFilters}>Clear Filters</button>
       </div>
-      {isLoading ? <div className={styles.isLoading}>Loading...</div> : <div className={styles.vansListContainer}>
+      {isError ? <h3 className={styles.errorStyle}>Error loading results</h3> : isLoading ? <div className={styles.isLoading}>Loading...</div> : <div className={styles.vansListContainer}>
         {allVanItems}
       </div>
       }

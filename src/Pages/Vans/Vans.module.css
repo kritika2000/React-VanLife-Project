@@ -67,6 +67,11 @@
     background-color: #FFDDB2;
 }
 
+.errorStyle{
+    text-align: center;
+    color: red;
+}
+
 @media (max-width: 450px){
     .vansListContainer{
         display: grid;

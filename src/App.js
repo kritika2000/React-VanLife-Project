@@ -15,7 +15,8 @@ import Details from './Pages/Host/Details';
 import Pricing from './Pages/Host/Pricing';
 import Photos from './Pages/Host/Photos';
 import './server';
-import Search from './SearchParams/Search';
+import NotFound from './Components/NotFound';
+import Login from './Components/Login';
 
 /**
  * We want to nest routes in case we want to share some UI between routes
@@ -29,16 +30,20 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Layout/>}>
+          {/* <Route path='login' element={<Login/>}/> */}
           <Route index element={<Home/>}/>
           <Route path="about" element={<About/>}/>
+          {/* Vans Paths */}
           <Route path="vans">
           <Route index element={<Vans/>}/>
           <Route path=":id" element={<Van/>}/>
           </Route>
+          {/* Host Paths */}
           <Route path="host" element={<HostLayout/>}>
             <Route index element={<Dashboard/>}/>
             <Route path="income" element={<Income/>}/>
             <Route path="reviews" element={<Reviews/>}/>
+            {/* Host Vans Paths */}
             <Route path="vans">
               <Route index element={<HostVans/>}/>
               <Route path=":id" element={<HostVan/>}>
@@ -49,6 +54,7 @@ function App() {
             </Route>
           </Route>
           {/* <Route path='characters' element={<Search/>}/> */}
+          <Route path='*' element={<NotFound/>}/>
         </Route>
       </Routes>
     </div>

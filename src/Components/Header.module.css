@@ -4,10 +4,11 @@
     display: flex;
     align-items: center;
     box-shadow: 1px 1px 5px 2px lightgray;
+    padding-inline: 1em;
 }
 
 .navLinks{
-    padding-inline: 1em;
+    margin-right: 2em;
 }
 
 .navbarContainer a:not(:first-child) {
@@ -30,8 +31,4 @@
 
 .hostLink{
     margin-left: auto;
-}
-
-.aboutLink{
-    margin-inline: 3em;
 }
